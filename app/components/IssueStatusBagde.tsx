@@ -1,22 +1,45 @@
+// import { Status } from '@prisma/client'
+// import { Badge } from '@radix-ui/themes'
+// import React from 'react'
+
+// const statusMap: Record<
+//     Status,
+//     { label: string, color: 'red' | 'violet' | 'green' }>
+//     = {
+//     OPEN: { label: 'Open', color: 'red' },
+//     IN_PROGRESS: { label: 'In_Progress', color: 'violet' },
+//     CLOSED: { label: 'Closed', color: 'green'}
+// }
+
+// const IssueStatusBagde = ({ status}: { status: Status}) => {
+//   return (
+//       <Badge color={statusMap[status].color}>
+//           { statusMap[status].label}
+//         </Badge>
+//   )
+// }
+
+// export default IssueStatusBagde
+
 import { Status } from '@prisma/client'
 import { Badge } from '@radix-ui/themes'
 import React from 'react'
 
 const statusMap: Record<
-    Status,
-    { label: String, color: 'red' | 'violet' | 'green' }>
-    = {
-    OPEN: { label: 'Open', color: 'red' },
-    IN_PROGRESS: { label: 'In_Progress', color: 'violet' },
-    CLOSED: { label: 'Closed', color: 'green'}
-}
+  Status, 
+  { label: string, color: 'red' | 'violet' | 'green' }
+> = {
+  OPEN: { label: 'Open', color: 'red' },
+  IN_PROGRESS: { label: 'In Progress', color: 'violet' },
+  CLOSED: { label: 'Closed', color: 'green' }
+};
 
-const IssueStatusBagde = ({ status}: { status: Status}) => {
+const IssueStatusBadge = ({ status }: { status: Status }) => {
   return (
-      <Badge color={statusMap[status].color}>
-          { statusMap[status].label}
-        </Badge>
+    <Badge color={statusMap[status]?.color}>
+      {statusMap[status]?.label}
+    </Badge>
   )
 }
 
-export default IssueStatusBagde
+export default IssueStatusBadge
