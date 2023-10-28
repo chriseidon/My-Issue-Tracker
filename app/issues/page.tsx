@@ -30,11 +30,11 @@ const  IssuePage = async () => {
                 {issue.title}
                 </Link>
                 <div className="block md:hidden">
-                  <IssueStatusBagde status={ issue.Status} />
+                  <IssueStatusBagde status={ issue.status} />
                 </div>
               </Table.Cell>
               <Table.Cell className='hidden md:table-cell'>
-                <IssueStatusBagde status={ issue.Status}/>
+                <IssueStatusBagde status={ issue.status}/>
               </Table.Cell>
               <Table.Cell className='hidden md:table-cell'>{ issue.createdAt.toDateString()}</Table.Cell>
             </Table.Row>
